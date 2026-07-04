@@ -1,0 +1,30 @@
+html {
+  font-family: Ubuntu, sans-serif;
+  font-weight: 400;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1250px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
