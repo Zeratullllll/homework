@@ -1,0 +1,123 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+form {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+legend {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+span {
+  display: block;
+  margin-bottom: 2px;
+}
+input,
+textarea {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  padding-left: 10px;
+}
+textarea {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  resize: vertical;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  padding-left: 10px;
+  min-height: 50px;
+  max-height: 150px;
+  margin-bottom: 10px;
+}
+input:disabled,
+textarea:disabled {
+  opacity: 0.7;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #9e1fff;
+  color: #fff;
+  padding: 6px 18px;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+button:not(:disabled):active {
+  background-color: #8719db;
+}
+button:disabled,
+input[type="checkbox"]:disabled::after {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+input[type="checkbox"]:focus-visible:after {
+  outline: 2px solid #9e1fff;
+  outline-offset: 1px;
+}
+.label-checkbox {
+  padding-left: 22px;
+  margin-bottom: 20px !important;
+}
+fieldset:nth-child(2) > label {
+  margin-bottom: 2px;
+}
+input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  border: 0;
+}
+input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: -32px;
+  margin-top: -6px;
+}
+input[type="checkbox"]:checked::after {
+  background:
+    url("./images/check-icon.svg") no-repeat center,
+    #9e1fff;
+}
