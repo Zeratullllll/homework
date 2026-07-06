@@ -91,10 +91,11 @@
 }
 
 .news-link::after {
-  content: url(../images/arrow-right-icon.svg);
+  content: ""
   display: inline-block;
   width: 22px;
   height: 9px;
+  background: url(../images/arrow-right-icon.svg);
   transition: transform 0.2s;
 }
 
