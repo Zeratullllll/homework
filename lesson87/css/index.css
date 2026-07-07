@@ -91,7 +91,7 @@
 }
 
 .news-link::after {
-  content: ""
+  content: "";
   display: inline-block;
   width: 22px;
   height: 9px;
