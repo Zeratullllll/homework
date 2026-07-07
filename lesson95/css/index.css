@@ -43,6 +43,7 @@
   margin-bottom: 221px;
   max-width: 440px;
 }
+
 .hero-images img {
   width: 50%;
 }
@@ -247,6 +248,7 @@ summary::-webkit-details-marker {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 60px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
