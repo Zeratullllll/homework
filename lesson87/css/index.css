@@ -92,10 +92,10 @@
 
 .news-link::after {
   content: "";
+  background: url(../images/arrow-right-icon.svg);
   display: inline-block;
   width: 22px;
   height: 9px;
-  background: url(../images/arrow-right-icon.svg);
   transition: transform 0.2s;
 }
 
