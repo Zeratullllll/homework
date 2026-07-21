@@ -1,0 +1,97 @@
+.characteristics__video-preview {
+  border: 1px solid var(--main-color);
+  border-radius: 12px;
+}
+
+.characteristics__video {
+  position: relative;
+}
+.characteristics__video-play-link {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--main-color);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a2a2980;
+  box-shadow:
+    var(--shadow-glow),
+    inset var(--shadow-glow);
+  transition:
+    border var(--transition-time),
+    box-shadow var(--transition-time);
+  cursor: pointer;
+}
+@media (width>576px) {
+  .characteristics__video-play-link {
+    width: 80px;
+    height: 80px;
+  }
+  .characteristics__video-play-icon {
+    width: 17px;
+    height: 23px;
+    transform: translateX(2px);
+  }
+}
+@media (width<=576px) {
+  .characteristics__video-play-link {
+    width: 48px;
+    height: 48px;
+  }
+  .characteristics__video-play-icon {
+    width: 10px;
+    height: 13px;
+    transform: translateX(1px);
+  }
+}
+@media (any-hover: hover) {
+  .characteristics__video-play-link:hover {
+    border: 1px solid var(--accent-color);
+    box-shadow:
+      var(--shadow-accent-glow),
+      inset var(--shadow-accent-glow);
+  }
+}
+
+@media (width>576px) {
+  .characteristics__video {
+    margin-bottom: 60px;
+  }
+}
+
+@media (width<=576px) {
+  .characteristics__video {
+    margin-bottom: 40px;
+  }
+}
+.characteristics__card {
+  display: flex;
+  flex-direction: column;
+}
+.characteristics__card-icon {
+  margin-bottom: 4px;
+  transform: translateX(-8px);
+}
+.characteristics__card-title {
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+.characteristics__card-description {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 140%;
+  color: var(--main-color);
+}
+.characteristics__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+  gap: 40px 20px;
+}
