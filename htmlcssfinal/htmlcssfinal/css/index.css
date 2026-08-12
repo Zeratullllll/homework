@@ -1,0 +1,15 @@
+@import "./base/fonts.css";
+@import "./base/var.css";
+@import "./base/normalize.css";
+@import "./base/global.css";
+
+@import "./blocks/header.css";
+@import "./blocks/hero.css";
+@import "./blocks/halls.css";
+@import "./blocks/advantages.css";
+@import "./blocks/card.css";
+@import "./blocks/reservation.css";
+@import "./blocks/faq.css";
+@import "./blocks/accordion.css";
+@import "./blocks/footer.css";
+@import "./blocks/modal.css";
