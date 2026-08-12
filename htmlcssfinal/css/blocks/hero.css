@@ -155,8 +155,8 @@
 }
 
 .hero__badge {
-  width: clamp(10rem, 8.271rem + 7.38vw, 17.125rem);
-  height: clamp(10rem, 8.271rem + 7.38vw, 17.125rem);
+  width: clamp(10rem, 7.118rem + 12.3vw, 21.875rem);
+  height: clamp(10rem, 7.118rem + 12.3vw, 21.875rem);
   position: absolute;
   background-image: url(../../images/hero-illustrations-info.png);
   display: flex;
