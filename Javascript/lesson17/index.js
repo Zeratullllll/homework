@@ -1,7 +1,7 @@
 // Задача 1.
 // Напишите условие, которое будет проверять чётное ли число, используйте оператор if.
 
-const number = prompt("Введите число", undefined);
+const number = Number(prompt("Введите число", undefined));
 if (number !== undefined && number % 2 === 0) {
   alert("Число четное");
 } else if (number % 2 === 1) {
@@ -45,7 +45,7 @@ switch (true) {
 
 const username = prompt("Введите логин(admin или user)");
 const password = prompt("Введите пароль");
-if ((username === "admin" || username === "password") && password === "123456") {
+if ((username === "admin" || username === "user") && password === "123456") {
   alert("Доступ разрешен");
 } else {
   alert("Доступ запрещен");
@@ -85,7 +85,7 @@ if ((username === "admin" || username === "password") && password === "123456") 
 // 6. Вывод результата:
 //    С помощью alert выведите итоговую стоимость доставки, например: "Итоговая стоимость доставки: 15$."
 
-const weight = prompt("Введите вес(в килограммах)");
+const weight = Number(prompt("Введите вес(в килограммах)"));
 let basePrice = 0;
 let k = 0;
 
