@@ -1,7 +1,7 @@
 // Задача 1.
 // Напишите функцию calculateFinalPrice, которая принимает базовую цену товара, процент скидки и налоговую ставку. Функция должна вычислять скидку, затем прибавлять налог и возвращать итоговую цену.
 
-calculateFinalPrice = (basePrice, discount, taxValue) =>
+const calculateFinalPrice = (basePrice, discount, taxValue) =>
   basePrice * ((100 - discount) / 100) + taxValue * basePrice * ((100 - discount) / 100);
 
 // Пример работы:
