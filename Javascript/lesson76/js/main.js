@@ -49,21 +49,33 @@ const deleteTodoById = (todos, todoId) => {
 const form = document.querySelector(".form");
 const input = document.querySelector(".input");
 const todosList = document.querySelector(".todos");
+const buttonSubmit = document.querySelector(".button-create");
 
 function createTodoElement(text) {
-  todosList.insertAdjacentHTML(
-    "beforeend",
-    `
-    <li class="todo">
-          <div class="todo-text">${text}</div>
+  const todo = document.createElement("li");
+  todo.classList.add("todo");
+  todo.innerHTML = `<div class="todo-text">${text}</div>
           <div class="todo-actions">
             <button class="button-complete button">&#10004;</button>
             <button class="button-delete button">&#10006;</button>
-          </div>
-        </li>`,
-  );
+          </div>`;
+  todosList.append(todo);
+  return todo;
 }
 function handleCreateTodo(todos, text) {
   createTodo(todos, text);
   createTodoElement(text);
 }
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const text = input.value.trim();
+
+  if (text == "") {
+    return;
+  }
+  handleCreateTodo(todos, text);
+
+  input.value = "";
+});
