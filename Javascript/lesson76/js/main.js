@@ -59,12 +59,12 @@ function createTodoElement(text) {
             <button class="button-complete button">&#10004;</button>
             <button class="button-delete button">&#10006;</button>
           </div>`;
-  todosList.append(todo);
+
   return todo;
 }
 function handleCreateTodo(todos, text) {
   createTodo(todos, text);
-  createTodoElement(text);
+  todosList.append(createTodoElement(text));
 }
 
 form.addEventListener("submit", (event) => {
