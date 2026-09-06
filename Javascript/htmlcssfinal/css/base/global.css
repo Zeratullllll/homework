@@ -1,0 +1,223 @@
+.page {
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: var(--main-color);
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+.page__body {
+  position: relative;
+  min-width: 375px;
+  background-color: var(--bg-color);
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  width: min(var(--container-width), 100% - var(--container-padding) * 2);
+  margin: 0 auto;
+}
+.logo {
+  width: clamp(10.125rem, 8.396rem + 7.38vw, 17.25rem);
+  flex-shrink: 0;
+}
+a.focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 1px solid var(--accent-color);
+  outline-offset: 2px;
+}
+img {
+  object-fit: cover;
+}
+.text-extra-info {
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+@media (width >1200px) {
+  .text-extra-info {
+    font-size: 15px;
+  }
+}
+@media (width<=1200px) {
+  .text-extra-info {
+    font-size: 14px;
+  }
+}
+.title-big {
+  font-weight: 900;
+  font-size: clamp(2.25rem, 1.658rem + 2.52vw, 4.688rem);
+  line-height: 109%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.title-regular {
+  font-weight: 400;
+  font-size: clamp(1.125rem, 1.034rem + 0.39vw, 1.5rem);
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+}
+@media (width>1200px) {
+  .title-regular {
+    line-height: 200%;
+  }
+}
+@media (width<=1200px) {
+  .title-regular {
+    line-height: 128%;
+  }
+}
+.title-small {
+  font-weight: 800;
+  font-size: clamp(0.875rem, 0.814rem + 0.26vw, 1.125rem);
+  line-height: 133%;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+.text-regular {
+  font-weight: 400;
+  font-size: clamp(0.813rem, 0.767rem + 0.19vw, 1rem);
+  line-height: 194%;
+  letter-spacing: 0.03em;
+  color: #c5c5c5;
+}
+.text--accent {
+  color: var(--accent-color);
+}
+.button-text {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  /* color: var(--second-color); */
+}
+@media (width > 1200px) {
+  .button-text {
+    font-size: 13px;
+  }
+}
+@media (width <= 1200px) {
+  .button-text {
+    font-size: 11px;
+  }
+}
+.info-block {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.icon-wrapper {
+  width: clamp(3.188rem, 3.051rem + 0.58vw, 3.75rem);
+  height: clamp(3.188rem, 3.051rem + 0.58vw, 3.75rem);
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: var(--border-radius-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accent-button {
+  border-radius: 60px;
+  height: clamp(3.125rem, 2.822rem + 1.29vw, 4.375rem);
+  padding-top: 29px;
+  padding-bottom: 21px;
+  color: black;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.accent-button--narrow {
+  width: clamp(13.938rem, 13.118rem + 3.5vw, 17.313rem);
+}
+
+@media (width>768px) {
+  .accent-button--wide {
+    width: 277px;
+  }
+}
+@media (width<=768px) {
+  .accent-button--wide {
+    width: 100%;
+  }
+}
+/* body section:not(.advantages),
+footer {
+  display: none !important;
+} */
+
+section,
+.footer {
+  position: relative;
+}
+.lines-bg {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  inset: 0;
+  padding: 0 204px;
+  z-index: 0;
+  pointer-events: none;
+}
+.line {
+  background-color: #fff;
+  height: 100%;
+  width: 1px;
+  opacity: 0.1;
+}
+.hero .lines-bg {
+  right: 50%;
+}
+.lines-spacer {
+  height: 100%;
+  flex-grow: 1;
+  background: transparent;
+}
+.hero .lines-spacer:nth-child(2) {
+  background: linear-gradient(180deg, rgba(96, 101, 113, 0) 0%, rgba(96, 101, 113, 0.05) 100%);
+}
+.advantages .lines-spacer:nth-child(4) {
+  background: linear-gradient(180deg, rgba(96, 101, 113, 0) 0%, rgba(96, 101, 113, 0.05) 100%);
+}
+.reservation .lines-spacer:nth-child(2) {
+  background: linear-gradient(180deg, rgba(96, 101, 113, 0) 0%, rgba(96, 101, 113, 0.05) 100%);
+}
+.faq .lines-spacer:nth-child(4) {
+  background: linear-gradient(180deg, rgba(96, 101, 113, 0) 0%, rgba(96, 101, 113, 0.05) 100%);
+}
+.footer .lines-spacer:nth-child(2) {
+  background: linear-gradient(180deg, rgba(96, 101, 113, 0) 0%, rgba(96, 101, 113, 0.05) 100%);
+}
+
+.hero .lines-bg :nth-last-child(-n + 4) {
+  display: none;
+}
+
+@media (width<=992px) {
+  .hero .lines-bg {
+    right: 0;
+    min-width: 204px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 233px;
+    padding: 0;
+  }
+  .lines-bg {
+    min-width: 204px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 233px;
+    padding: 0;
+  }
+  .lines-bg :nth-last-child(-n + 4) {
+    display: none;
+  }
+  .halls .lines-bg {
+    display: none;
+  }
+}

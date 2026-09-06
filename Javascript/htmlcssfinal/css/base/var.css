@@ -1,0 +1,17 @@
+:root {
+  --font-family: Muller;
+
+  --main-color: #fff;
+  --accent-color: #f69020;
+  --accent-gradient: linear-gradient(93.25deg, #ea422a 0%, #f69020 48.83%, #ffc619 101.91%);
+  --bg-color: #191b20;
+  --bg-shadow: inset -39px 0 27px 12px var(--bg-color);
+
+  --container-width: 100%;
+  --container-padding: clamp(0.625rem, 0.35rem + 1.2vw, 3.188rem);
+
+  --border-radius-main: 40px;
+  --border-radius-second: 60px;
+
+  --transition-time: 0.2s;
+}

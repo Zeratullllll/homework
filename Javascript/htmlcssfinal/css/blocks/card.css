@@ -1,0 +1,41 @@
+.card {
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-right: 31px;
+  padding-bottom: 38px;
+}
+
+.card:nth-child(2n - 1) {
+  background: #282b32;
+}
+
+.card:nth-child(2n) {
+  background: #202124;
+}
+
+.card__icon {
+  margin-bottom: 25px;
+}
+
+.card__title {
+  margin-bottom: 16px;
+}
+
+.card__item {
+  display: flex;
+  gap: 10px;
+}
+
+.card__item::before {
+  content: "";
+  display: inline-block;
+  transform: translateY(5px);
+  background: url("../../icons/checkbox.svg") no-repeat center / contain;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.card__text {
+  display: inline-block;
+}
