@@ -1,27 +1,37 @@
-import BurgerMenu from "./burger.js";
-import Modal from "./modal.js";
+import { burgerInit } from "./burger.js";
+import { initCloseModal, initModalButtons } from "./modal.js";
+import {
+  addSlidesClasses as addSlidesClassesReservation,
+  buttonsInit as buttonsInitReservation,
+  initMouseControl,
+} from "./reservation-slider.js";
 
-try {
-  new BurgerMenu({
-    BURGER: "header__burger",
-    BURGER_OPEN: "header__burger--open",
-    HEADER_MENU: "mobile-menu",
-    HEADER_MENU_OPEN: "mobile-menu--open",
-    lABEL: {
-      OPEN: "Открыть меню",
-      CLOSE: "Закрыть меню",
-    },
-    PAGE_BODY: "page__body",
-    PAGE_BODY_NO_SCROLL: "page__body--no-scroll",
-    MENU_LINK: "menu__link",
-    BREAKPOINT: 992,
-    MAIN: "main",
-  });
+import {
+  sliderInit as addSlidesClassesHalls,
+  buttonsInit as buttonsInitHalls,
+  initMouseControl as initMouseControl1,
+} from "./halls__slider.js";
+import {
+  sliderInit as addSlidesClassesHallsExtra,
+  buttonsInit as buttonsInitHallsExtra,
+} from "./halls__slider-extra.js";
 
-  new Modal({
-    PAGE_BODY: "page__body",
-    PAGE_BODY_NO_SCROLL: "page__body--no-scroll",
-  });
-} catch (error) {
-  console.error(error);
-}
+import { tabsInit } from "./halls-tabs.js";
+
+burgerInit();
+
+initCloseModal();
+initModalButtons();
+
+addSlidesClassesHalls();
+buttonsInitHalls();
+initMouseControl1();
+
+addSlidesClassesHallsExtra();
+buttonsInitHallsExtra();
+
+addSlidesClassesReservation();
+buttonsInitReservation();
+initMouseControl();
+
+tabsInit();
