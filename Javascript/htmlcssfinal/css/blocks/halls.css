@@ -24,7 +24,9 @@
     gap: 27px;
   }
 }
-
+.halls__track {
+  touch-action: pan-y;
+}
 .halls__header {
   z-index: 1;
   display: flex;
@@ -68,6 +70,16 @@
 .halls__spacer--second {
   flex-basis: 50%;
 }
+.halls__slider--top {
+  width: 100%;
+  overflow-x: hidden;
+}
+.halls__slider--down .swiper-wrapper {
+  display: flex;
+}
+.halls .swiper-slide {
+  width: 100%;
+}
 
 .halls__list {
   display: flex;
@@ -81,7 +93,9 @@
     max-width: 46%;
   }
 }
-
+.halls__track {
+  display: flex;
+}
 .halls__tab {
   font-weight: 700;
   font-size: 15px;
