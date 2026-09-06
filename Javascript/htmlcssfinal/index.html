@@ -4,12 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Xarizma - Караоке клуб</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="icon" href="./icons/micro-favicon.svg" type="image/svg" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="./js/reservation-slider.js"></script>
-    <script type="module" src="./js/halls__slider.js"></script>
     <script src="./js/lines.js" type="module"></script>
     <script type="module" src="./js/index.js"></script>
   </head>
@@ -82,17 +78,15 @@
           </button>
           <button class="header__burger" aria-label="открыть меню">
             <span>
-              <svg
+              <img
                 class="header__burger-icon"
                 width="29"
                 height="12"
                 viewBox="0 0 29 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="29" height="3" rx="1.5" fill="#F69020" />
-                <rect y="9" width="29" height="3" rx="1.5" fill="#F69020" />
-              </svg>
+                src="./icons/burger.svg"
+              />
             </span>
           </button>
           <div class="mobile-menu">
@@ -245,15 +239,15 @@
         <h3 class="halls__subtitle title-regular">Ознакомтесь с атмосферой праздника</h3>
         <div class="halls__spacer halls__spacer--second"></div>
         <ul class="halls__list">
-          <li class="halls__item"><button class="halls__tab">Hall №1</button></li>
-          <li class="halls__item"><button class="halls__tab">Hall №2</button></li>
-          <li class="halls__item"><button class="halls__tab">Hall №3</button></li>
-          <li class="halls__item"><button class="halls__tab">Hall №5</button></li>
+          <li class="halls__item"><button class="halls__tab" data-hall="1">Hall №1</button></li>
+          <li class="halls__item"><button class="halls__tab" data-hall="2">Hall №2</button></li>
+          <li class="halls__item"><button class="halls__tab" data-hall="3">Hall №3</button></li>
+          <li class="halls__item"><button class="halls__tab" data-hall="4">Hall №5</button></li>
         </ul>
       </div>
-      <div class="halls__slider-wrap">
+      <div class="halls__slider-wrap" data-hall="1">
         <div class="swiper halls__slider halls__slider--top">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper halls__track">
             <div class="swiper-slide">
               <img src="./images/halls-slider/slide-1.svg" alt="Hall 1" />
             </div>
@@ -272,7 +266,209 @@
           </div>
         </div>
         <div class="swiper halls__slider halls__slider--down">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper halls__track">
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-1.webp" type="image/webp" />
+                <img
+                  src="./images/halls-slider/slide-1.png"
+                  alt="Зал с огромным телевизором и минибаром"
+                  loading="lazy"
+              /></picture>
+            </div>
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-2.webp" type="image/webp" />
+                <img
+                  src="./images/halls-slider/slide-2.png"
+                  alt="Зал с едой на столе и шикарным диваном"
+                  loading="lazy"
+              /></picture>
+            </div>
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-3.webp" type="image/webp" />
+                <img
+                  src="./images/halls-slider/slide-3.png"
+                  alt="Освещенный зал с ещё более шикарным диваном и столом, а ещё там женщина на стене"
+                  loading="lazy"
+              /></picture>
+            </div>
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-4.webp" type="image/webp" />
+                <img
+                  src="./images/halls-slider/slide-4.png"
+                  alt="ну такой, прикольненький зал, я бы сказал 9/10"
+                  loading="lazy"
+              /></picture>
+            </div>
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-5.webp" type="image/webp" />
+                <img src="./images/halls-slider/slide-5.png" alt="кресло, что тут ещё сказать?" loading="lazy"
+              /></picture>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="halls__slider-wrap" data-hall="2">
+        <div class="swiper halls__slider halls__slider--top">
+          <div class="swiper-wrapper halls__track">
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-2.svg" alt="Hall 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-1.svg" alt="Hall 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-3.svg" alt="Hall 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-4.svg" alt="Hall 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-5.svg" alt="Hall 5" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper halls__slider halls__slider--down">
+          <div class="swiper-wrapper halls__track">
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-2.webp" type="image/webp" />
+                <img
+                  src="./images/halls-slider/slide-2.png"
+                  alt="Зал с едой на столе и шикарным диваном"
+                  loading="lazy"
+              /></picture>
+            </div>
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-1.webp" type="image/webp" />
+                <img
+                  src="./images/halls-slider/slide-1.png"
+                  alt="Зал с огромным телевизором и минибаром"
+                  loading="lazy"
+              /></picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-3.webp" type="image/webp" />
+                <img
+                  src="./images/halls-slider/slide-3.png"
+                  alt="Освещенный зал с ещё более шикарным диваном и столом, а ещё там женщина на стене"
+                  loading="lazy"
+              /></picture>
+            </div>
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-4.webp" type="image/webp" />
+                <img
+                  src="./images/halls-slider/slide-4.png"
+                  alt="ну такой, прикольненький зал, я бы сказал 9/10"
+                  loading="lazy"
+              /></picture>
+            </div>
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-5.webp" type="image/webp" />
+                <img src="./images/halls-slider/slide-5.png" alt="кресло, что тут ещё сказать?" loading="lazy"
+              /></picture>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="halls__slider-wrap" data-hall="3">
+        <div class="swiper halls__slider halls__slider--top">
+          <div class="swiper-wrapper halls__track">
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-1.svg" alt="Hall 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-2.svg" alt="Hall 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-3.svg" alt="Hall 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-4.svg" alt="Hall 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-5.svg" alt="Hall 5" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper halls__slider halls__slider--down">
+          <div class="swiper-wrapper halls__track">
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-1.webp" type="image/webp" />
+                <img
+                  src="./images/halls-slider/slide-1.png"
+                  alt="Зал с огромным телевизором и минибаром"
+                  loading="lazy"
+              /></picture>
+            </div>
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-2.webp" type="image/webp" />
+                <img
+                  src="./images/halls-slider/slide-2.png"
+                  alt="Зал с едой на столе и шикарным диваном"
+                  loading="lazy"
+              /></picture>
+            </div>
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-3.webp" type="image/webp" />
+                <img
+                  src="./images/halls-slider/slide-3.png"
+                  alt="Освещенный зал с ещё более шикарным диваном и столом, а ещё там женщина на стене"
+                  loading="lazy"
+              /></picture>
+            </div>
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-4.webp" type="image/webp" />
+                <img
+                  src="./images/halls-slider/slide-4.png"
+                  alt="ну такой, прикольненький зал, я бы сказал 9/10"
+                  loading="lazy"
+              /></picture>
+            </div>
+            <div class="swiper-slide">
+              <picture
+                ><source srcset="./images/halls-slider/slide-5.webp" type="image/webp" />
+                <img src="./images/halls-slider/slide-5.png" alt="кресло, что тут ещё сказать?" loading="lazy"
+              /></picture>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="halls__slider-wrap" data-hall="4">
+        <div class="swiper halls__slider halls__slider--top">
+          <div class="swiper-wrapper halls__track">
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-1.svg" alt="Hall 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-2.svg" alt="Hall 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-3.svg" alt="Hall 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-4.svg" alt="Hall 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/halls-slider/slide-5.svg" alt="Hall 5" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper halls__slider halls__slider--down">
+          <div class="swiper-wrapper halls__track">
             <div class="swiper-slide">
               <picture
                 ><source srcset="./images/halls-slider/slide-1.webp" type="image/webp" />
@@ -319,7 +515,67 @@
         </div>
       </div>
       <div class="halls__benefits container">
-        <ul class="halls__benefits-list">
+        <ul class="halls__benefits-list" data-hall="1">
+          <li class="halls__benefits-item">
+            <svg class="halls__benefits-icon">
+              <use href="./icons/halls-benefits-sprite.svg#cube"></use>
+            </svg>
+            <p class="halls__benefits-text">№ 1</p>
+          </li>
+          <li class="halls__benefits-item">
+            <svg class="halls__benefits-icon">
+              <use href="./icons/halls-benefits-sprite.svg#4arrows"></use>
+            </svg>
+            <p class="halls__benefits-text">40 м2</p>
+          </li>
+          <li class="halls__benefits-item">
+            <svg class="halls__benefits-icon">
+              <use href="./icons/halls-benefits-sprite.svg#people"></use>
+            </svg>
+            <p class="halls__benefits-text">до 20-ти человек</p>
+          </li>
+        </ul>
+        <ul class="halls__benefits-list" data-hall="2">
+          <li class="halls__benefits-item">
+            <svg class="halls__benefits-icon">
+              <use href="./icons/halls-benefits-sprite.svg#cube"></use>
+            </svg>
+            <p class="halls__benefits-text">№ 999</p>
+          </li>
+          <li class="halls__benefits-item">
+            <svg class="halls__benefits-icon">
+              <use href="./icons/halls-benefits-sprite.svg#4arrows"></use>
+            </svg>
+            <p class="halls__benefits-text">40 км4</p>
+          </li>
+          <li class="halls__benefits-item">
+            <svg class="halls__benefits-icon">
+              <use href="./icons/halls-benefits-sprite.svg#people"></use>
+            </svg>
+            <p class="halls__benefits-text">до 500-ти человек</p>
+          </li>
+        </ul>
+        <ul class="halls__benefits-list" data-hall="3">
+          <li class="halls__benefits-item">
+            <svg class="halls__benefits-icon">
+              <use href="./icons/halls-benefits-sprite.svg#cube"></use>
+            </svg>
+            <p class="halls__benefits-text">№ 1</p>
+          </li>
+          <li class="halls__benefits-item">
+            <svg class="halls__benefits-icon">
+              <use href="./icons/halls-benefits-sprite.svg#4arrows"></use>
+            </svg>
+            <p class="halls__benefits-text">40 м2</p>
+          </li>
+          <li class="halls__benefits-item">
+            <svg class="halls__benefits-icon">
+              <use href="./icons/halls-benefits-sprite.svg#people"></use>
+            </svg>
+            <p class="halls__benefits-text">до 20-ти человек</p>
+          </li>
+        </ul>
+        <ul class="halls__benefits-list" data-hall="4">
           <li class="halls__benefits-item">
             <svg class="halls__benefits-icon">
               <use href="./icons/halls-benefits-sprite.svg#cube"></use>
@@ -902,7 +1158,7 @@
       <div class="modal__window modal-geo" data-modal-window="geo">
         <button class="modal__close" aria-label="Закрыть" title="Закрыть" data-modal-close>
           <svg width="24" height="24">
-            <use href="./icons/sprite.svg#menu-cross"></use>
+            <use href="./icons/burger-cross.svg"></use>
           </svg>
         </button>
         <div class="modal__content modal__content--geo">
